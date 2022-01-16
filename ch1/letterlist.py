@@ -26,3 +26,12 @@ while(i < len(letter_list)):
 print("List of unique letters is: ", letter_list) # Destroys original copy - would need to run loop to get back. How to create a copy?
 
 # Exercise 2: Redo the given code using list comprehension
+letter_list_lc = [a_letter for a_word in word_list for a_letter in a_word]
+
+print("List of letters, created using list comprehension, is: ", letter_list_lc)
+
+# (Extra Challenge) Exercise 2E: Remove the duplicates in the course of list comprehending
+letter_list_ec = list()
+[letter_list_ec.append(a_letter) for a_word in word_list for a_letter in a_word if letter_list_ec.count(a_letter) == 0]
+
+print("List of unique letters, created using list comprehension, is: ", letter_list_ec)
